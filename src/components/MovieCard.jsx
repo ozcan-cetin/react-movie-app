@@ -13,7 +13,13 @@ const MovieCard = ({movie}) => {
       <div className='movie-img'>
         <img src={poster_path ? IMG_API + poster_path : defaultImage} alt={title} />
       </div>
-      <h2>{title}</h2>
+      <div className='movieTitle'>
+        <h3>{title}</h3>
+      </div>
+      <div className='overview'>
+        <p>{overview}</p>
+      </div>
+      
     </div>
   )
 }

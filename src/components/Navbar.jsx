@@ -8,7 +8,7 @@ const Navbar = () => {
   const {currentUser} = useContext(AuthContext)
   const navigate = useNavigate()
   return (
-    <nav className="navbar navbar-expand-lg bg-info gap-2 d-md-flex justify-content-end">
+    <nav className="navbar navbar-expand-lg bg-info gap-2 d-md-flex justify-content-end mb-1">
       {currentUser ? (
         <>
         <h5>{currentUser.displayName}</h5>
