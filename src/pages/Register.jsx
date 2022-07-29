@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { createUser } from "../auth/firebase";
+import { useNavigate } from "react-router";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -6,8 +8,11 @@ const Register = () => {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
 
+  const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    createUser(email, password, navigate)
   }
   return (
     <div className="d-flex justify-content-between row">
