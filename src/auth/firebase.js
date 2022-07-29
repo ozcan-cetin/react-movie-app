@@ -64,4 +64,46 @@ export const signIn = async (email, password, navigate) => {
     }
   };
 
-  
+
+  export const userObserver = (setCurrentUser) => {
+    //? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setCurrentUser(user);
+      } else {
+        // User is signed out
+        setCurrentUser(false);
+      }
+    });
+  };
+
+
+  //! logout
+
+  export const logOut = () => {
+    signOut(auth);
+  };
+
+
+  //! google
+//* https://console.firebase.google.com/
+//* => Authentication => sign-in-method => enable Google
+//! Google ile girişi enable yap
+//* => Authentication => sign-in-method => Authorized domains => add domain
+//! Projeyi deploy ettikten sonra google sign-in çalışması için domain listesine deploy linkini ekle
+export const signUpProvider = (navigate) => {
+    //? Google ile giriş yapılması için kullanılan firebase metodu
+    const provider = new GoogleAuthProvider();
+    //? Açılır pencere ile giriş yapılması için kullanılan firebase metodu
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+        navigate('/');
+        // toastSuccessNotify('Logged out successfully!');
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        console.log(error);
+      });
+  };
+   

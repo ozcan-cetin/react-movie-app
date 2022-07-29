@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {useNavigate} from "react-router-dom"
-import { signIn } from '../auth/firebase'
+import { signIn, signUpProvider } from '../auth/firebase'
 
 const Login = () => {
     const [email, setEmail] = useState("")
@@ -12,6 +12,11 @@ const Login = () => {
         e.preventDefault()
         signIn(email, password, navigate)
     }
+
+    const handleProviderLogin = () => {
+        signUpProvider(navigate);
+      };
+
   return (
     <div className='d-flex row'>
         <div className='d-none d-md-block col-6'>
@@ -28,9 +33,14 @@ const Login = () => {
                     <label htmlFor="password" className="form-label col-1 me-3">Password</label>
                     <input type="password" className='form-control' placeholder="Enter Your Password" required value={password} onChange={(e)=>setPassword(e.target.value)}/>
                 </div>
-                <button className='btn bg-primary text-white col-5 '>Login</button>
-               
+                <button className='btn btn-primary text-white form-control mb-2'>Login</button>
             </form>
+            <button
+          className="btn btn-primary form-control"
+          onClick={handleProviderLogin}
+        >
+          Continue with Google
+        </button>
         </div>
     </div>
   )
