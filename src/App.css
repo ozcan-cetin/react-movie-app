@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: black;
+  /* background-color: black; */
 }
 form{
   /* border: 1px solid red; */
@@ -30,6 +30,7 @@ form{
   background-color: rgb(16, 165, 214);
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 
 
@@ -37,11 +38,6 @@ form{
   width: 300px;
 }
 
-/* .movieTitle{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 .overview {
   position: absolute;
