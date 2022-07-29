@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {useNavigate} from "react-router-dom"
-import { signIn, signUpProvider } from '../auth/firebase'
+import { forgotPassword, signIn, signUpProvider } from '../auth/firebase'
 
 const Login = () => {
     const [email, setEmail] = useState("")
@@ -33,6 +33,9 @@ const Login = () => {
                     <label htmlFor="password" className="form-label col-1 me-3">Password</label>
                     <input type="password" className='form-control' placeholder="Enter Your Password" required value={password} onChange={(e)=>setPassword(e.target.value)}/>
                 </div>
+                <div className="link" onClick={() => forgotPassword(email)}>
+            Forgot Password?
+          </div>
                 <button className='btn btn-primary text-white form-control mb-2'>Login</button>
             </form>
             <button
