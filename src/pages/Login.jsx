@@ -19,6 +19,7 @@ const Login = () => {
                     <label htmlFor="password" className="form-label col-1 me-3">Password</label>
                     <input type="password" className='form-control' placeholder="Enter Your Password" required value={password} onChange={(e)=>setPassword(e.target.value)}/>
                 </div>
+                <button className='btn bg-primary text-white col-5 '>Login</button>
                
             </form>
         </div>
