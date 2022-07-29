@@ -7,15 +7,16 @@ import Main from "../pages/Main";
 import MovieDetail from "../pages/MovieDetail";
 import Register from "../pages/Register";
 import {Navigate, Outlet} from "react-router-dom"
+import PrivateRouter from "./PrivateRouter";
 
 const AppRouter = () => {
   const {currentUser} = useContext(AuthContext)
   console.log(currentUser);
 
-  function PrivateRouter() {
-    console.log("private");
-    return currentUser ? <Outlet /> : <Navigate to="/login" replace />;
-  }
+  // function PrivateRouter() {
+  //   console.log("private");
+  //   return currentUser ? <Outlet /> : <Navigate to="/login" replace />;
+  // }
   return (
     <BrowserRouter>
       <Navbar />
