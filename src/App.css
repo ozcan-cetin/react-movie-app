@@ -56,3 +56,24 @@ form{
 .singleMovie:hover .overview{
   transform: translateX(0%);
 }
+
+.tag {
+  border-radius: 5px;
+  padding: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tag.green {
+  background-color: #1b5e20;
+}
+
+.tag.orange {
+  background-color: #f57f17;
+}
+
+.tag.red {
+  background-color: #7f0000;
+}
