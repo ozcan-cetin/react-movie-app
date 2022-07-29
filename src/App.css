@@ -13,3 +13,23 @@ form{
   text-decoration: underline;
   margin-bottom: 1rem;
 }
+
+.movieContainer{
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+  
+}
+
+.singleMovie{
+  width: 320px;
+}
+
+/* .movie-img{
+  width:fit-content
+} */
+
+.movie-img img{
+  width: 300px;
+}
