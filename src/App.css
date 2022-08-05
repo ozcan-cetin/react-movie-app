@@ -5,11 +5,15 @@
 }
 
 body{
-  /* background-color: black; */
+  background-color: black;
 }
 form{
   /* border: 1px solid red; */
 }
+
+/* .register-img{
+
+} */
 
 .link{
   cursor: pointer;
@@ -17,15 +21,15 @@ form{
   margin-bottom: 1rem;
 }
 
-.movieContainer{
+/* .movieContainer{
   display: flex;
   justify-content: space-around;
   gap: 1rem;
   flex-wrap: wrap;
-}
+} */
 
 .singleMovie{
-  width: 320px;
+  /* width: 320px; */
   color: white;
   background-color: rgb(16, 165, 214);
   overflow: hidden;
@@ -35,7 +39,7 @@ form{
 
 
 .movie-img img{
-  width: 300px;
+  width: 100%;
 }
 
 
@@ -58,12 +62,12 @@ form{
 }
 
 .tag {
-  border-radius: 5px;
-  padding: 0.7rem;
+  /* border-radius: 5px; */
+  /* padding: 0.7rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .tag.green {

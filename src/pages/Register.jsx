@@ -17,16 +17,16 @@ const Register = () => {
   }
   return (
     <div className="d-flex justify-content-between row">
-      <div className="d-none d-md-block col-6">
-        <img src={"https://picsum.photos/700/700"} alt="sample-movie" />
+      <div className="d-none d-md-block col-md-6">
+        <img src={"https://picsum.photos/700/700"} className="w-100" alt="sample-movie" />
       </div>
-      <div className="container col-md-5">
+      <div className="col-md-6 mx-auto">
         <h1>Register</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="d-flex flex-column align-items-center justify-content-center px-2">
           <div className="input-group mb-3 gap-4">
-            <label htmlFor="first name" className="form-label col-2 me-3">
+            {/* <label htmlFor="first name" className="form-label col-2 me-3">
               First Name
-            </label>
+            </label> */}
             <input
               type="text"
               className="form-control"
@@ -37,9 +37,9 @@ const Register = () => {
             />
           </div>
           <div className="input-group mb-3 gap-4">
-            <label htmlFor="last name" className="form-label col-2 me-3">
+            {/* <label htmlFor="last name" className="form-label col-2 me-3">
               Last Name
-            </label>
+            </label> */}
             <input
               type="text"
               className="form-control"
@@ -50,9 +50,9 @@ const Register = () => {
             />
           </div>
           <div className="input-group mb-3 gap-4">
-            <label htmlFor="email" className="form-label col-2 me-3">
+            {/* <label htmlFor="email" className="form-label col-2 me-3">
               Email
-            </label>
+            </label> */}
             <input
               type="email"
               className="form-control"
@@ -63,9 +63,9 @@ const Register = () => {
             />
           </div>
           <div className="input-group mb-3 gap-4">
-            <label htmlFor="password" className="form-label col-2 me-3">
+            {/* <label htmlFor="password" className="form-label col-2 me-3">
               Password
-            </label>
+            </label> */}
             <input
               type="password"
               className="form-control"
@@ -75,7 +75,7 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit" className="btn bg-primary text-white col-5 ">Register</button>
+          <button type="submit" className="btn btn-primary text-white form-control ">Register</button>
         </form>
       </div>
     </div>

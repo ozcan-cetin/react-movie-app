@@ -17,7 +17,7 @@ const Main = () => {
     setIsLoading(true)
     try {
       const {data} = await axios.get(API)
-      console.log(data);
+      // console.log(data);
       setMovies(data.results)
       setIsLoading(false)
     } catch (error) {
@@ -34,7 +34,7 @@ const Main = () => {
   }
   return (
     <div>
-      <div className='movieContainer'>
+      <div className='movieContainer row m-auto'>
         {movies?.map((movie)=><MovieCard key={movie.id} movie={movie}/>)}
       </div>
     </div>
