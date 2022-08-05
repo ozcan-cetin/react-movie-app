@@ -23,7 +23,7 @@ const MovieCard = ({movie}) => {
   }
 
   return (
-    <div className='col-lg-4 col-md-6'>
+    <div className='col-lg-3 col-md-4 col-xs-12 mx-auto'>
       <div className='card singleMovie my-1' onClick={()=>navigate("/details/" + id)}>
       <div className='movie-img'>
         <img src={poster_path ? IMG_API + poster_path : defaultImage} alt={title} />
