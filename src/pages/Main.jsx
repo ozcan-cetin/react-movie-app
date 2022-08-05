@@ -41,7 +41,7 @@ const Main = () => {
     }
     else if(!currentUser){
       toastWarnNotify('Please log in to search a movie');
-      // navigate("/login")
+      navigate("/login")
     }
     else{
       toastWarnNotify('Please enter a text');
