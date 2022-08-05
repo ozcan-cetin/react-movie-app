@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import MovieCard from '../components/MovieCard';
 import { AuthContext } from '../context/AuthContext';
 import {useNavigate} from 'react-router-dom';
-import { toastWarnNotify } from '../helpers/Toastify';
+// import { toastWarnNotify } from '../helpers/Toastify';
 
 
 const API_KEY = process.env.REACT_APP_TMDB_KEY;
@@ -40,11 +40,11 @@ const Main = () => {
       getMovies(SEARCH_API + searchTerm) 
     }
     else if(!currentUser){
-      toastWarnNotify('Please log in to search a movie');
+      // toastWarnNotify('Please log in to search a movie');
       navigate("/login")
     }
     else{
-      toastWarnNotify('Please enter a text');
+      // toastWarnNotify('Please enter a text');
     }
     
   }
