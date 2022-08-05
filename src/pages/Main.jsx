@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import MovieCard from '../components/MovieCard';
 import { AuthContext } from '../context/AuthContext';
 import {useNavigate} from 'react-router-dom';
-import { toastWarnNotify } from '../helpers/toastify';
+import { toastWarnNotify } from '../helpers/Toastify';
 
 
 const API_KEY = process.env.REACT_APP_TMDB_KEY;
