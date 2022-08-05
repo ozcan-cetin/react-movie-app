@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import MovieCard from '../components/MovieCard';
 import { AuthContext } from '../context/AuthContext';
 import {useNavigate} from 'react-router-dom';
-import { toastWarnNotify } from '../helpers/toastify';
+import { toastWarnNotify } from '../helpers/Toastify';
 
 
 const API_KEY = process.env.REACT_APP_TMDB_KEY;
@@ -41,7 +41,10 @@ const Main = () => {
     }
     else if(!currentUser){
       toastWarnNotify('Please log in to search a movie');
-      navigate("/login")
+      // navigate("/login")
+    }
+    else{
+      toastWarnNotify('Please enter a text');
     }
     
   }
@@ -51,14 +54,14 @@ const Main = () => {
   }
   return (
     <div>
-      <form className="search" onSubmit={handleSubmit}>
+      <form className="search d-flex justify-content-center" onSubmit={handleSubmit}>
         <input
           type="search"
-          className="search-input"
+          className="bg-warning text-danger fs-4 px-2 rounded-2"
           placeholder="Search a movie..."
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <button type="submit">Search</button>
+        <button type="submit" className='btn btn-dark'>Search</button>
       </form>
       <div className='movieContainer row m-auto'>
         {movies?.map((movie)=><MovieCard key={movie.id} movie={movie}/>)}
